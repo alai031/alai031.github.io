@@ -61,7 +61,7 @@ export default function NavBar() {
       <div className='flex justify-between items-center w-full h-full px-2 2xl:px-16'>
         <Link href='/'>
           <Image
-            src='/navLogo.png'
+            src='/initials.png'
             alt='navLogo image'
             width='125'
             height='50'
@@ -105,7 +105,7 @@ export default function NavBar() {
           <div className='flex w-full items-center justify-between'>
             <Link href='/'>
               <Image
-                src='/navLogo.png' 
+                src='/initials.png' 
                 width='87' 
                 height='35' 
                 alt='/' 
@@ -142,19 +142,23 @@ export default function NavBar() {
           </ul>
           <div className='pt-40'>
             <p className='uppercase tracking-widest text-[#5651e5]'>Let's Connect</p>
-            <div className='flex items-center justify-between my-4 w-full sm:w-[80%]'>
-              <div className='rounded-full shadow-lg shadow-gray-400 p-3 cursor-pointer hover:scale-105 ease-in duration-300'> 
+            <div className='flex items-center justify-between my-4 w-full sm:w-[25%]'>
+              <a 
+                href="https://www.linkedin.com/in/auberon-lai/" 
+                target="_blank"
+                rel="noopener noreferrer" 
+                className='rounded-full shadow-lg shadow-gray-400 p-3 cursor-pointer hover:scale-105 ease-in duration-300'
+              >
                 <FaLinkedinIn />
-              </div>
-              <div className='rounded-full shadow-lg shadow-gray-400 p-3 cursor-pointer hover:scale-105 ease-in duration-300'> 
+              </a>
+              <a
+                href="https://github.com/alai031" 
+                target="_blank"
+                rel="noopener noreferrer" 
+                className='rounded-full shadow-lg shadow-gray-400 p-3 cursor-pointer hover:scale-105 ease-in duration-300'
+              >
                 <FaGithub />
-              </div>
-              <div className='rounded-full shadow-lg shadow-gray-400 p-3 cursor-pointer hover:scale-105 ease-in duration-300'> 
-                <AiOutlineMail />
-              </div>
-              <div className='rounded-full shadow-lg shadow-gray-400 p-3 cursor-pointer hover:scale-105 ease-in duration-300'> 
-                <BsFillPersonLinesFill />
-              </div>
+              </a>
             </div>
           </div>
         </div>    
