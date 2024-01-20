@@ -1,4 +1,4 @@
-import chatboxdImg from '../../../public/chatboxd.png'
+import chatboxdImg from '/public/chatboxd.png'
 import Image from 'next/image'
 import {RiRadioButtonFill} from 'react-icons/ri'
 import Link from 'next/link'
@@ -11,7 +11,7 @@ export default function chatboxdPage() {
                 <Image className='absolute z-1' layout='fill' objectFit='cover' src={chatboxdImg} alt='/' />
                 <div className='absolute top-[70%] max-w-[1240px] w-full left-[50%] right-[50%] translate-x-[-50%] translate-y-[-50%] text-white z-10 p-2'>
                     <h2 className='py-2'>Chatboxd</h2>
-                    <h3>React JS / Tailwind / Firebase</h3>    
+                    <h3>ReactJS / NodeJS / MongoDB</h3>    
                 </div>
             </div>
         
@@ -29,8 +29,24 @@ export default function chatboxdPage() {
                             account with an email address in order to save your favorite
                             properties. This is made possible with Zillow API.
                         </p>
-                        <button className='px-8 py-2 mt-4 mr-8'>Demo</button>
-                        <button className='px-8 py-2 mt-4'>Code</button>
+                        <a 
+                            href='https://youtu.be/f1Pumm8vHKU'
+                            target="_blank"
+                            rel="noopener noreferrer"
+                        >
+                            <button className='px-8 py-2 mt-4 mr-8'>
+                                Video Demo 
+                            </button>
+                        </a>
+                        <a 
+                            href='https://github.com/UCR-CS110-S23/project-chatboxd'
+                            target="_blank"
+                            rel="noopener noreferrer"
+                        >
+                            <button className='px-8 py-2 mt-4 mr-8'>
+                                Code
+                            </button>
+                        </a>
                     </div>
                     <div className='col-span-4 md:col-span-1 shadow-xl shadow-gray-400 rounded-xl p-4'>
                         <div className='p-2'>
@@ -40,24 +56,24 @@ export default function chatboxdPage() {
                                     <RiRadioButtonFill className='pr-1'/> React
                                 </p>
                                 <p className='text-gray-600 py-2 flex items-center'>
-                                    <RiRadioButtonFill className='pr-1'/> Tailwind
-                                </p>
-                                <p className='text-gray-600 py-2 flex items-center'>
                                     <RiRadioButtonFill className='pr-1'/> JavaScript
                                 </p>
                                 <p className='text-gray-600 py-2 flex items-center'>
-                                    <RiRadioButtonFill className='pr-1'/> Firebase
+                                    <RiRadioButtonFill className='pr-1'/> Node.js
                                 </p>
                                 <p className='text-gray-600 py-2 flex items-center'>
-                                    <RiRadioButtonFill className='pr-1'/> Google API
+                                    <RiRadioButtonFill className='pr-1'/> Express.js
                                 </p>
                                 <p className='text-gray-600 py-2 flex items-center'>
-                                    <RiRadioButtonFill className='pr-1'/> Zillow API
+                                    <RiRadioButtonFill className='pr-1'/> MongoDB
+                                </p>
+                                <p className='text-gray-600 py-2 flex items-center'>
+                                    <RiRadioButtonFill className='pr-1'/> Socket.IO
                                 </p>
                             </div>                
                         </div>
                     </div>    
-                    <Link href='/projects'>
+                    <Link href='../#projects'>
                         <p className='underline cursor-pointer'>Back</p>
                     </Link>
                 </div>

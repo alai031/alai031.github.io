@@ -8,8 +8,8 @@ import {HiOutlineChevronDoubleUp} from 'react-icons/hi'
 
 export default function ContactPage() {
     return (
-        <div className='w-full lg:h-screen'>
-            <div className='max-w-[1240px] m-auto px-2 py-36 w-full'>
+        <div id='contact' className='w-full lg:h-screen'>
+            <div className='max-w-[1240px] m-auto px-2 py-28 w-full'>
                 <p className='text-xl tracking-widest uppercase text-[#5651e5]'>Contact</p>
                 <h2 className='py-4'>Get In Touch</h2>
                 <div className='grid lg:grid-cols-5 gap-8'>
@@ -92,7 +92,7 @@ export default function ContactPage() {
                     </div>
                 </div>
                 <div className='flex justify-center py-12'>
-                    <Link href='/'>
+                    <Link href='/#home'>
                         <div className='rounded-full shadow-lg shadow-gray-400 p-4 cursor-pointer hover:scale-110 ease-in duration-300'>
                             <HiOutlineChevronDoubleUp className='text-[#5351e5]' size={30}/>
                         </div>

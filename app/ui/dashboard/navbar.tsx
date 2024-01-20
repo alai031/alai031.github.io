@@ -59,7 +59,7 @@ export default function NavBar() {
       }
     >
       <div className='flex justify-between items-center w-full h-full px-2 2xl:px-16'>
-        <Link href='/'>
+        <Link href='/#home'>
           <Image
             src='/initials.png'
             alt='navLogo image'
@@ -69,21 +69,21 @@ export default function NavBar() {
         </Link>
         <div>
           <ul style={{color: `${linkColor}`}} className='hidden md:flex'>
-            <Link href='/'>
-              <li className='ml-10 text-sm uppercase hover:border-b'>Home</li>
-            </Link>
-            <Link href='/about'>
-              <li className='ml-10 text-sm uppercase hover:border-b'>About</li>
-            </Link>
-            <Link href='/skills'>
-              <li className='ml-10 text-sm uppercase hover:border-b'>Skills</li>
-            </Link>
-            <Link href='/projects'>
-              <li className='ml-10 text-sm uppercase hover:border-b'>Projects</li>
-            </Link>
-            <Link href='/contact'>
-              <li className='ml-10 text-sm uppercase hover:border-b'>Contact</li>
-            </Link>
+            <li className='ml-10 text-sm uppercase hover:border-b'>
+              <Link href='/#home'>Home</Link>
+            </li>
+            <li className='ml-10 text-sm uppercase hover:border-b'>
+              <Link href='/#about'>About</Link>
+            </li>
+            <li className='ml-10 text-sm uppercase hover:border-b'>
+              <Link href='/#skills'>Skills</Link>
+            </li>
+            <li className='ml-10 text-sm uppercase hover:border-b'>
+              <Link href='/#projects'>Projects</Link>
+            </li>
+            <li className='ml-10 text-sm uppercase hover:border-b'>
+              <Link href='/#contact'>Contact</Link>
+            </li>
           </ul>
           <div onClick={handleNav} className='md:hidden'>
             <AiOutlineMenu size={25} />
@@ -103,7 +103,7 @@ export default function NavBar() {
           }>
         <div>
           <div className='flex w-full items-center justify-between'>
-            <Link href='/'>
+            <Link href='/#home'>
               <Image
                 src='/initials.png' 
                 width='87' 
@@ -124,19 +124,19 @@ export default function NavBar() {
         </div>
         <div className='py-4 flex flex-col'>
           <ul className='uppercase'>
-            <Link href='/'>
+            <Link href='/#home'>
               <li onClick={()=> setNav(false)} className='py-4 text-sm'>Home</li>
             </Link>
-            <Link href='/about'>
+            <Link href='#about'>
               <li onClick={()=> setNav(false)} className='py-4 text-sm'>About</li>
             </Link>
-            <Link href='/skills'>
+            <Link href='#skills'>
               <li onClick={()=> setNav(false)} className='py-4 text-sm'>Skills</li>
             </Link>
-            <Link href='/projects'>
+            <Link href='#projects'>
               <li onClick={()=> setNav(false)} className='py-4 text-sm'>Projects</li>
             </Link>
-            <Link href='/contact'>
+            <Link href='#contact'>
               <li onClick={()=> setNav(false)} className='py-4 text-sm'>Contact</li>
             </Link>
           </ul>

@@ -11,7 +11,7 @@ export default function tictactoePage() {
                 <Image className='absolute z-1' layout='fill' objectFit='cover' src={tictactoeImg} alt='/' />
                 <div className='absolute top-[70%] max-w-[1240px] w-full left-[50%] right-[50%] translate-x-[-50%] translate-y-[-50%] text-white z-10 p-2'>
                     <h2 className='py-2'>Tic Tac Toe</h2>
-                    <h3>React JS / Tailwind / Firebase</h3>    
+                    <h3>JavaScript / HTML / CSS</h3>    
                 </div>
             </div>
         
@@ -29,35 +29,45 @@ export default function tictactoePage() {
                             account with an email address in order to save your favorite
                             properties. This is made possible with Zillow API.
                         </p>
-                        <button className='px-8 py-2 mt-4 mr-8'>Demo</button>
-                        <button className='px-8 py-2 mt-4'>Code</button>
+                        <a 
+                            href='https://tic-tac-toe-five-blue.vercel.app/'
+                            target="_blank"
+                            rel="noopener noreferrer"
+                        >
+                            <button className='px-8 py-2 mt-4 mr-8'>
+                                Open app 
+                            </button>
+                        </a>
+                        <a 
+                            href='https://github.com/alai031/TicTacToe'
+                            target="_blank"
+                            rel="noopener noreferrer"
+                        >
+                            <button className='px-8 py-2 mt-4 mr-8'>
+                                Code
+                            </button>
+                        </a>
                     </div>
                     <div className='col-span-4 md:col-span-1 shadow-xl shadow-gray-400 rounded-xl p-4'>
                         <div className='p-2'>
                             <p className='text-center font-bold pb-2'>Technologies</p>
-                            <div className='grid grid-cols-3 md:grid-cols-1'>
-                                <p className='text-gray-600 py-2 flex items-center'>
-                                    <RiRadioButtonFill className='pr-1'/> React
-                                </p>
-                                <p className='text-gray-600 py-2 flex items-center'>
-                                    <RiRadioButtonFill className='pr-1'/> Tailwind
-                                </p>
+                            <div className='grid grid-cols-2 md:grid-cols-1'>
                                 <p className='text-gray-600 py-2 flex items-center'>
                                     <RiRadioButtonFill className='pr-1'/> JavaScript
                                 </p>
                                 <p className='text-gray-600 py-2 flex items-center'>
-                                    <RiRadioButtonFill className='pr-1'/> Firebase
+                                    <RiRadioButtonFill className='pr-1'/> HTML
                                 </p>
                                 <p className='text-gray-600 py-2 flex items-center'>
-                                    <RiRadioButtonFill className='pr-1'/> Google API
+                                    <RiRadioButtonFill className='pr-1'/> CSS
                                 </p>
                                 <p className='text-gray-600 py-2 flex items-center'>
-                                    <RiRadioButtonFill className='pr-1'/> Zillow API
+                                    <RiRadioButtonFill className='pr-1'/> jQuery
                                 </p>
                             </div>                
                         </div>
                     </div>    
-                    <Link href='/projects'>
+                    <Link href='../#projects'>
                         <p className='underline cursor-pointer'>Back</p>
                     </Link>
                 </div>
