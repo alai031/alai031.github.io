@@ -10,24 +10,23 @@ export default function chatboxdPage() {
                 <div className='absolute top-0 left-0 w-full h-[30vh] lg:h-[40vh] bg-black/60 z-10' />
                 <Image className='absolute z-1' layout='fill' objectFit='cover' src={chatboxdImg} alt='/' />
                 <div className='absolute top-[70%] max-w-[1240px] w-full left-[50%] right-[50%] translate-x-[-50%] translate-y-[-50%] text-white z-10 p-2'>
-                    <h2 className='py-2'>Chatboxd</h2>
+                    <h1 className='py-2'>Chatboxd</h1>
                     <h3>ReactJS / NodeJS / MongoDB</h3>    
                 </div>
             </div>
         
                 <div className='max-w-[1240px] mx-auto p-2 grid md:grid-cols-5 gap-8 pt-8'>
                     <div className='col-span-4'>
-                        <p>Project</p>
+                        <p className='text-xl'>Project</p>
                         <h2>Overview</h2>
-                        <p>
-                            This app was built using React JS and is hosted on Firebase. Users
-                            are able to search properties based on an Address, City, or ZIP code
-                            to retrieve a list of active properties currently for sale. You will
-                            be able to view property information as well as the specific
-                            location of the property integrated with the Google Maps API. User
-                            authentication is available so you can signup and signin to your
-                            account with an email address in order to save your favorite
-                            properties. This is made possible with Zillow API.
+                        <p className='py-4 text-lg'>
+                            This app's front-end was built using React and JavaScript. The back-end 
+                            was built using Node.js and Express.js. MongoDB was used for the database.
+                            User authentication is available so you can sign up and log in to your account 
+                            and have your rooms and chat messages saved. Users can create their own chatrooms
+                            or join existing ones and send messages to everyone else in the room. They may also
+                            edit, search, or react to messages. Feel free to view a demo of the app by clicking
+                            'Video Demo' below!
                         </p>
                         <a 
                             href='https://youtu.be/f1Pumm8vHKU'
@@ -50,8 +49,8 @@ export default function chatboxdPage() {
                     </div>
                     <div className='col-span-4 md:col-span-1 shadow-xl shadow-gray-400 rounded-xl p-4'>
                         <div className='p-2'>
-                            <p className='text-center font-bold pb-2'>Technologies</p>
-                            <div className='grid grid-cols-3 md:grid-cols-1'>
+                            <p className='text-center font-bold pb-2 text-lg'>Technologies</p>
+                            <div className='grid grid-cols-3 md:grid-cols-1 text-base'>
                                 <p className='text-gray-600 py-2 flex items-center'>
                                     <RiRadioButtonFill className='pr-1'/> React
                                 </p>
@@ -74,7 +73,7 @@ export default function chatboxdPage() {
                         </div>
                     </div>    
                     <Link href='../#projects'>
-                        <p className='underline cursor-pointer'>Back</p>
+                        <p className='underline cursor-pointer text-lg pb-8'>Back</p>
                     </Link>
                 </div>
         </div>
