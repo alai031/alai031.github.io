@@ -20,7 +20,10 @@ export default function ContactPage() {
                                 <div className='col-span-2'>
                                     <h2 className='py-2'>Auberon Lai</h2>
                                     <p className='text-xl'>Aspiring Software Developer</p>
-                                    <p className='py-20'>I am available for full-time positions. Contact me and let's talk.</p>
+                                    <p className='py-20'>
+                                        I am available for full-time positions. Contact me and let's talk. <br/>
+                                        Email: Auberonlaiwr@gmail.com
+                                    </p>
                                     <p className='uppercase pt-4'>Connect With Me</p>
                                     <div className='flex items-center justify-between max-w-[170px] py-4'>
                                         <a 

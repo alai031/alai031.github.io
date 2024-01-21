@@ -81,7 +81,7 @@ export default function NavBar() {
             <li className='ml-10 text-sm uppercase hover:border-b'>
               <Link href='/#projects'>Projects</Link>
             </li>
-            <li className='ml-10 text-sm uppercase hover:border-b'>
+            <li className='ml-10 text-sm uppercase hover:border-b pr-3'>
               <Link href='/#contact'>Contact</Link>
             </li>
           </ul>
