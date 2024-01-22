@@ -46,12 +46,23 @@ export default function NavBar() {
         setLinkColor('#1f2937')
       } else{
         setShadow(false)
-        setNavBg('transparent')
-        setLinkColor('#ecf0f3')
+        if (
+          pathname === '/projects/chess' || 
+          pathname === '/projects/chatboxd' ||
+          pathname === '/projects/hangman' ||
+          pathname === '/projects/tictactoe'
+        ) {
+          setNavBg('transparent')
+          setLinkColor('#ecf0f3')
+        }
+        else {
+          setNavBg('#ecf0f3')
+          setLinkColor('#1f2937')
+        }
       }
     };
     window.addEventListener('scroll', handleShadow);
-  }, [])
+  }, [pathname])
 
   return (
     <div 
