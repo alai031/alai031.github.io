@@ -140,9 +140,9 @@ export default function NavBar() {
               <li onClick={()=> setNav(false)} className='py-4 text-sm'>Contact</li>
             </Link>
           </ul>
-          <div className='pt-40'>
+          <div className='pt-6'>
             <p className='uppercase tracking-widest text-[#5651e5]'>Let's Connect</p>
-            <div className='flex items-center justify-between my-4 w-full sm:w-[25%]'>
+            <div className='flex items-center justify-between my-4 max-w-[90px]'>
               <a 
                 href="https://www.linkedin.com/in/auberon-lai/" 
                 target="_blank"
