@@ -68,7 +68,7 @@ export default function hangmanPage() {
                         </div>
                     </div>    
                     <Link href='../#projects'>
-                        <p className='underline cursor-pointer text-lg pt-8'>Back</p>
+                        <p className='underline cursor-pointer text-lg pt-8 pb-6 md:pb-0'>Back</p>
                     </Link>
                 </div>
         </div>
