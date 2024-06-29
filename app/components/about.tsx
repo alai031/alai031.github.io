@@ -12,14 +12,13 @@ export default function AboutPage() {
           <h2 className="py-4">Who I Am</h2>
           {/* <p className='py-2 text-gray-600'>// I am not your normal developer</p> */}
           <p className="py-2 text-gray-600">
-            I am a college graduate from the University of California Riverside.
-            I graduated in June 2023 with a B.S. degree in Computer Science and
-            magna cum laude honors. I am currently working as a software
-            engineer at Mission Support and Test Services, LLC. I am passionate
-            about learning new technologies and understand there are multiple
-            ways to accomplishing a task. Though I am most proficient in C++,
-            JavaScript, HTML, and CSS, I am a fast learner and can pick up new
-            tech stacks as needed.
+            I graduated from the University of California Riverside in June 2023
+            with a B.S. degree in Computer Science and magna cum laude honors. I
+            am currently working as a software engineer at Mission Support and
+            Test Services, LLC. I am passionate about learning new technologies
+            and understand there are multiple ways to accomplishing a task.
+            Though I am most proficient in C++, JavaScript, HTML, and CSS, I am
+            a fast learner and can pick up new tech stacks as needed.
           </p>
           <p className="py-2 text-gray-600">
             I grew up in San Marino, CA, a small residential city in Los Angeles
