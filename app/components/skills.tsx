@@ -12,20 +12,40 @@ export default function SkillsPage() {
           <div className="rounded-xl p-6 shadow-xl duration-300 ease-in hover:scale-105">
             <div className="grid grid-cols-2 items-center justify-center gap-4">
               <div className="m-auto">
-                <Image src="/c++.png" width="64" height="64" alt="/" />
+                <Image src="/javascript.png" width="64" height="64" alt="/" />
               </div>
               <div className="flex flex-col items-center justify-center">
-                <h3>C++</h3>
+                <h3>JavaScript</h3>
               </div>
             </div>
           </div>
           <div className="rounded-xl p-6 shadow-xl duration-300 ease-in hover:scale-105">
             <div className="grid grid-cols-2 items-center justify-center gap-4">
               <div className="m-auto">
-                <Image src="/javascript.png" width="64" height="64" alt="/" />
+                <Image src="/csharp.png" width="64" height="64" alt="/" />
               </div>
               <div className="flex flex-col items-center justify-center">
-                <h3>JavaScript</h3>
+                <h3>C#</h3>
+              </div>
+            </div>
+          </div>
+          <div className="rounded-xl p-6 shadow-xl duration-300 ease-in hover:scale-105">
+            <div className="grid grid-cols-2 items-center justify-center gap-4">
+              <div className="m-auto">
+                <Image src="/angular.png" width="64" height="64" alt="/" />
+              </div>
+              <div className="flex flex-col items-center justify-center">
+                <h3>Angular</h3>
+              </div>
+            </div>
+          </div>
+          <div className="rounded-xl p-6 shadow-xl duration-300 ease-in hover:scale-105">
+            <div className="grid grid-cols-2 items-center justify-center gap-4">
+              <div className="m-auto">
+                <Image src="/c++.png" width="64" height="64" alt="/" />
+              </div>
+              <div className="flex flex-col items-center justify-center">
+                <h3>C++</h3>
               </div>
             </div>
           </div>

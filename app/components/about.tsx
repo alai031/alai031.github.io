@@ -17,14 +17,14 @@ export default function AboutPage() {
             am currently working as a software engineer at Mission Support and
             Test Services, LLC. I am passionate about learning new technologies
             and understand there are multiple ways to accomplishing a task.
-            Though I am most proficient in C++, JavaScript, HTML, and CSS, I am
-            a fast learner and can pick up new tech stacks as needed.
+            Though I am most proficient in JavaScript, C#, and Angular, I am a
+            fast learner and can pick up new tech stacks as needed.
           </p>
           <p className="py-2 text-gray-600">
             I grew up in San Marino, CA, a small residential city in Los Angeles
             County. In high school, I played varsity tennis and ran cross
-            country. Nowadays, in my spare time, I like to go on hikes, read
-            books, and play video games and tennis with friends.
+            country. In my free time, I like to read books and play video games
+            and pickleball with friends.
           </p>
           <Link
             href="#projects"

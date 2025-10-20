@@ -24,7 +24,7 @@ export default function ContactPage() {
                 <p className="py-20">
                   I am available for full-time positions. Contact me and let's
                   talk. <br />
-                  Email: Auberonlaiwr@gmail.com
+                  Email: Auberonlai24@gmail.com
                 </p>
                 <p className="pt-4 uppercase">Connect With Me</p>
                 <div className="flex max-w-[170px] items-center justify-between py-4">
