@@ -1,13 +1,9 @@
 'use client';
 
 import Link from 'next/link';
-import NavLinks from '@/app/ui/dashboard/nav-links';
-import AcmeLogo from '@/app/ui/acme-logo';
-import { PowerIcon } from '@heroicons/react/24/outline';
 import Image from 'next/image';
-import { AiOutlineClose, AiOutlineMail, AiOutlineMenu } from 'react-icons/ai';
+import { AiOutlineClose, AiOutlineMenu } from 'react-icons/ai';
 import { FaGithub, FaLinkedinIn } from 'react-icons/fa';
-import { BsFillPersonLinesFill } from 'react-icons/bs';
 import React, { useState, useEffect } from 'react';
 import clsx from 'clsx';
 import { usePathname } from 'next/navigation';
@@ -23,8 +19,7 @@ export default function NavBar() {
     if (
       pathname === '/projects/chess' ||
       pathname === '/projects/chatboxd' ||
-      pathname === '/projects/hangman' ||
-      pathname === '/projects/tictactoe' ||
+      pathname === '/projects/expensetracker' ||
       pathname === '/projects/gamestats'
     ) {
       setNavBg('transparent');
@@ -92,13 +87,25 @@ export default function NavBar() {
               <Link href="/#about">About</Link>
             </li>
             <li className="ml-10 text-sm uppercase hover:border-b">
+              <Link href="/#experience">Experience</Link>
+            </li>
+            <li className="ml-10 text-sm uppercase hover:border-b">
               <Link href="/#skills">Skills</Link>
             </li>
             <li className="ml-10 text-sm uppercase hover:border-b">
               <Link href="/#projects">Projects</Link>
             </li>
-            <li className="ml-10 pr-3 text-sm uppercase hover:border-b">
+            <li className="ml-10 text-sm uppercase hover:border-b">
               <Link href="/#contact">Contact</Link>
+            </li>
+            <li className="ml-10 pr-3 text-sm uppercase hover:border-b">
+              <a
+                href="/resume.pdf"
+                target="_blank"
+                rel="noopener noreferrer"
+              >
+                Resume
+              </a>
             </li>
           </ul>
           <div onClick={handleNav} className="md:hidden">
@@ -151,6 +158,11 @@ export default function NavBar() {
                   About
                 </li>
               </Link>
+              <Link href="/#experience">
+                <li onClick={() => setNav(false)} className="py-4 text-sm">
+                  Experience
+                </li>
+              </Link>
               <Link href="/#skills">
                 <li onClick={() => setNav(false)} className="py-4 text-sm">
                   Skills
@@ -166,6 +178,15 @@ export default function NavBar() {
                   Contact
                 </li>
               </Link>
+              <a
+                href="/resume.pdf"
+                target="_blank"
+                rel="noopener noreferrer"
+              >
+                <li onClick={() => setNav(false)} className="py-4 text-sm">
+                  Resume
+                </li>
+              </a>
             </ul>
             <div className="pt-6">
               <p className="uppercase tracking-widest text-[#5651e5]">

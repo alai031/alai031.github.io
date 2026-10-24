@@ -10,27 +10,28 @@ export default function AboutPage() {
             About
           </p>
           <h2 className="py-4">Who I Am</h2>
-          {/* <p className='py-2 text-gray-600'>// I am not your normal developer</p> */}
           <p className="py-2 text-gray-600">
-            I graduated from the University of California Riverside in June 2023
-            with a B.S. degree in Computer Science and magna cum laude honors. I
-            am currently working as a software engineer at Mission Support and
-            Test Services, LLC. I am passionate about learning new technologies
-            and understand there are multiple ways to accomplishing a task.
-            Though I am most proficient in JavaScript, C#, and Angular, I am a
-            fast learner and can pick up new tech stacks as needed.
+            I&apos;m a software engineer at Mission Support and Test Services,
+            LLC, where I build modern UIs for scientific and geospatial
+            applications. My day-to-day spans desktop development in C#, WPF,
+            and XAML as well as full-stack web development in Angular and
+            TypeScript. I take pride in collaborating with domain experts,
+            translating their workflows into clean interfaces, and measuring the
+            impact of what I ship.
           </p>
           <p className="py-2 text-gray-600">
-            I grew up in San Marino, CA, a small residential city in Los Angeles
-            County. In high school, I played varsity tennis and ran cross
-            country. In my free time, I like to read books and play video games
-            and pickleball with friends.
+            I graduated from the University of California, Riverside in June
+            2023 with a B.S. in Computer Science (magna cum laude, GPA 3.93). I
+            care about writing maintainable code, learning new stacks quickly,
+            and building things that make other people&apos;s work easier.
+            Outside of engineering, I enjoy tennis, pickleball, reading, and
+            video games with friends.
           </p>
           <Link
-            href="#projects"
+            href="#experience"
             className="cursor-pointer py-2 text-gray-600 underline"
           >
-            Check out some of my latest projects.
+            See what I&apos;ve been working on.
           </Link>
         </div>
         <div className="m-auto flex h-auto w-[50%] items-center justify-center rounded-xl p-4 shadow-xl shadow-gray-400 duration-300 ease-in hover:scale-105 md:w-full">
