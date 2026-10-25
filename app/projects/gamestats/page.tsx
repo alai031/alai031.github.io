@@ -1,78 +1,89 @@
 import gameStatsImg from '../../../public/gameStats.png';
 import Image from 'next/image';
-import { RiRadioButtonFill } from 'react-icons/ri';
 import Link from 'next/link';
+import { FaGithub } from 'react-icons/fa';
+import { HiOutlineExternalLink } from 'react-icons/hi';
 
-export default function chessPage() {
+const tech = ['React', 'JavaScript', 'Tailwind CSS', 'Firebase'];
+
+export default function GameStatsPage() {
   return (
-    <div className="w-full">
-      <div className="relative h-[30vh] w-screen lg:h-[40vh]">
-        <div className="absolute left-0 top-0 z-10 h-[30vh] w-full bg-black/30 lg:h-[40vh]" />
+    <div className="w-full pt-16">
+      <div className="relative h-[40vh] w-full">
         <Image
-          className="z-1 absolute"
-          layout="fill"
-          objectFit="cover"
           src={gameStatsImg}
-          alt="/"
+          alt="Game Stats"
+          fill
+          className="object-cover opacity-30"
         />
-        <div className="absolute left-[50%] right-[50%] top-[70%] z-10 w-full max-w-[1240px] translate-x-[-50%] translate-y-[-50%] p-2 text-white">
-          <h1 className="py-2">Game Stats</h1>
-          <h3>React / Tailwind CSS</h3>
+        <div className="absolute inset-0 bg-gradient-to-b from-transparent via-slate-950/60 to-[#020617]" />
+        <div className="absolute inset-0 flex items-end">
+          <div className="mx-auto w-full max-w-[1240px] px-6 pb-10">
+            <p className="font-mono text-sm uppercase tracking-widest text-cyan-400">
+              Project
+            </p>
+            <h1 className="mt-2 text-slate-100">Game Stats</h1>
+          </div>
         </div>
       </div>
 
-      <div className="mx-auto grid max-w-[1240px] gap-8 p-2 pt-8 md:grid-cols-5">
-        <div className="col-span-4">
-          <p className="text-xl">Project</p>
-          <h2>Overview</h2>
-          <p className="py-4 text-lg">
-            This dynamic web application, meticulously crafted with React,
-            Tailwind CSS, and Firebase, empowers users to effortlessly create
-            expressive gaming profiles showcasing their rankings across a
-            variety of games. Dive into a world where enthusiasts can seamlessly
-            explore and connect with fellow gamers by searching and viewing
-            their captivating profiles. Take a moment to experience it yourself
-            - simply click on the 'Open App' button below!
-          </p>
-          <a
-            href="https://game-stats-website.web.app/"
-            target="_blank"
-            rel="noopener noreferrer"
+      <div className="mx-auto grid max-w-[1240px] gap-10 px-6 py-12 md:grid-cols-5">
+        <div className="md:col-span-3">
+          <h2 className="text-2xl text-slate-100">Overview</h2>
+          <div className="mt-4 space-y-4 text-lg text-slate-400">
+            <p>
+              A gaming profile platform built with React, Tailwind CSS, and
+              Firebase. Users can create expressive gaming profiles showcasing
+              their rankings across different games.
+            </p>
+            <p>
+              Enthusiasts can search and view other users&apos; profiles to
+              connect with fellow gamers and compare rankings across titles.
+            </p>
+          </div>
+          <div className="mt-8 flex items-center gap-4">
+            <a
+              href="https://game-stats-website.web.app/"
+              target="_blank"
+              rel="noopener noreferrer"
+            >
+              <button className="flex items-center gap-2">
+                <HiOutlineExternalLink size={18} /> Open App
+              </button>
+            </a>
+            <a
+              href="https://github.com/alai031/game-stats"
+              target="_blank"
+              rel="noopener noreferrer"
+            >
+              <button className="flex items-center gap-2 border-slate-600 text-slate-300 hover:border-slate-400 hover:text-slate-100">
+                <FaGithub size={18} /> Code
+              </button>
+            </a>
+          </div>
+          <Link
+            href="/#projects"
+            className="mt-10 inline-block font-mono text-sm text-cyan-400 transition hover:text-cyan-300"
           >
-            <button className="mr-8 mt-4 px-8 py-2">Open app</button>
-          </a>
-          <a
-            href="https://github.com/alai031/game-stats"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            <button className="mr-8 mt-4 px-8 py-2">Code</button>
-          </a>
+            &larr; Back to projects
+          </Link>
         </div>
-        <div className="col-span-4 rounded-xl p-4 shadow-xl shadow-gray-400 md:col-span-1">
-          <div className="p-2">
-            <p className="pb-2 text-center text-lg font-bold">Technologies</p>
-            <div className="grid grid-cols-2 text-lg md:grid-cols-1">
-              <p className="flex items-center py-2 text-gray-600">
-                <RiRadioButtonFill className="pr-1" /> React
-              </p>
-              <p className="flex items-center py-2 text-gray-600">
-                <RiRadioButtonFill className="pr-1" /> JavaScript
-              </p>
-              <p className="flex items-center py-2 text-gray-600">
-                <RiRadioButtonFill className="pr-1" /> Tailwind CSS
-              </p>
-              <p className="flex items-center py-2 text-gray-600">
-                <RiRadioButtonFill className="pr-1" /> Firebase
-              </p>
-            </div>
+        <div className="md:col-span-2">
+          <div className="surface p-6">
+            <p className="section-eyebrow">Technologies</p>
+            <ul className="mt-4 space-y-2">
+              {tech.map((t) => (
+                <li
+                  key={t}
+                  className="flex items-center font-mono text-sm text-slate-300"
+                >
+                  <span className="mr-3 h-1.5 w-1.5 rounded-full bg-cyan-400" />
+                  {t}
+                </li>
+              ))}
+            </ul>
           </div>
         </div>
-        <Link href="../#projects">
-          <p className="cursor-pointer pb-6 pt-8 text-lg underline md:pb-0">
-            Back
-          </p>
-        </Link>
       </div>
     </div>
   );

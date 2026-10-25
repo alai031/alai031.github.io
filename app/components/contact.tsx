@@ -1,67 +1,81 @@
-import Image from 'next/image';
-import contactImg from '../../public/contact.jpg';
-import { AiOutlineMail } from 'react-icons/ai';
-import { BsFillPersonLinesFill } from 'react-icons/bs';
-import { FaGithub, FaLinkedinIn } from 'react-icons/fa';
+'use client';
+
 import Link from 'next/link';
+import { useState } from 'react';
+import { FaGithub, FaLinkedinIn } from 'react-icons/fa';
 import { HiOutlineChevronDoubleUp } from 'react-icons/hi';
 
-export default function ContactPage() {
-  return (
-    <div id="contact" className="w-full lg:h-screen">
-      <div className="m-auto w-full max-w-[1240px] px-2 py-28">
-        <p className="text-xl uppercase tracking-widest text-[#5651e5]">
-          Contact
-        </p>
-        <h2 className="py-4">Get In Touch</h2>
-        <div className="md:w-[100%]">
-          <div className="flex h-full rounded-xl p-4 shadow-xl shadow-gray-400">
-            <div className="flex grid h-full md:grid-cols-4 lg:p-4">
-              {/* Left */}
-              <div className="col-span-2">
-                <h2 className="py-2">Auberon Lai</h2>
-                <p className="text-xl">Software Engineer</p>
-                <p className="py-20">
-                  I am available for full-time positions. Contact me and let's
-                  talk. <br />
-                  Email: Auberonlai24@gmail.com
-                </p>
-                <p className="pt-4 uppercase">Connect With Me</p>
-                <div className="flex max-w-[170px] items-center justify-between py-4">
-                  <a
-                    href="https://www.linkedin.com/in/auberon-lai/"
-                    target="_blank"
-                    rel="noopener noreferrer"
-                    className="cursor-pointer rounded-full p-6 shadow-lg shadow-gray-400 duration-300 ease-in hover:scale-110"
-                  >
-                    <FaLinkedinIn />
-                  </a>
-                  <a
-                    href="https://github.com/alai031"
-                    target="_blank"
-                    rel="noopener noreferrer"
-                    className="cursor-pointer rounded-full p-6 shadow-lg shadow-gray-400 duration-300 ease-in hover:scale-110"
-                  >
-                    <FaGithub />
-                  </a>
-                </div>
-              </div>
+const EMAIL = 'Auberonlai24@gmail.com';
 
-              {/* Right */}
-              <div className="col-span-4 flex p-4 md:col-span-2">
-                <Image
-                  className="rounded-xl duration-300 ease-in hover:scale-105"
-                  src={contactImg}
-                  alt="/"
-                />
-              </div>
-            </div>
+export default function ContactPage() {
+  const [copied, setCopied] = useState(false);
+
+  const copyEmail = async () => {
+    try {
+      await navigator.clipboard.writeText(EMAIL);
+      setCopied(true);
+      setTimeout(() => setCopied(false), 700);
+    } catch {
+      // Clipboard API unavailable (e.g., insecure context) — silently ignore
+    }
+  };
+
+  return (
+    <div id="contact" className="w-full py-32">
+      <div className="mx-auto max-w-[1240px] px-6">
+        <div className="flex flex-col items-center text-center">
+          <p className="section-eyebrow">07 / Contact</p>
+          <h2 className="mt-4 text-slate-100">Get In Touch</h2>
+          <p className="mt-6 max-w-xl text-lg text-slate-400">
+            I&apos;m open to new opportunities &mdash; let&apos;s talk.
+            Currently based in Las Vegas, NV, and open to relocating for the
+            right role.
+          </p>
+
+          <div className="relative mt-8">
+            <button
+              type="button"
+              onClick={copyEmail}
+              className="border-0 bg-transparent p-0 font-mono text-base font-normal normal-case tracking-normal text-cyan-400 shadow-none transition hover:bg-transparent hover:text-cyan-300"
+            >
+              {EMAIL}
+            </button>
+            <span
+              className={`pointer-events-none absolute left-1/2 top-full mt-2 -translate-x-1/2 whitespace-nowrap rounded-md border border-cyan-400/40 bg-slate-900 px-2 py-0.5 font-mono text-[10px] text-cyan-300 transition-opacity duration-150 ${
+                copied ? 'opacity-100' : 'opacity-0'
+              }`}
+              aria-live="polite"
+            >
+              Copied to clipboard
+            </span>
+          </div>
+
+          <div className="mt-10 flex items-center gap-4">
+            <a
+              href="https://www.linkedin.com/in/auberon-lai/"
+              target="_blank"
+              rel="noopener noreferrer"
+              aria-label="LinkedIn"
+              className="rounded-full border border-white/10 p-3 text-slate-400 transition hover:border-cyan-400/60 hover:text-cyan-400"
+            >
+              <FaLinkedinIn size={18} />
+            </a>
+            <a
+              href="https://github.com/alai031"
+              target="_blank"
+              rel="noopener noreferrer"
+              aria-label="GitHub"
+              className="rounded-full border border-white/10 p-3 text-slate-400 transition hover:border-cyan-400/60 hover:text-cyan-400"
+            >
+              <FaGithub size={18} />
+            </a>
           </div>
         </div>
-        <div className="flex justify-center py-12">
-          <Link href="/#home">
-            <div className="cursor-pointer rounded-full p-4 shadow-lg shadow-gray-400 duration-300 ease-in hover:scale-110">
-              <HiOutlineChevronDoubleUp className="text-[#5351e5]" size={30} />
+
+        <div className="mt-24 flex justify-center">
+          <Link href="/#home" aria-label="Back to top">
+            <div className="rounded-full border border-white/10 p-4 text-slate-400 transition hover:border-cyan-400/60 hover:text-cyan-400">
+              <HiOutlineChevronDoubleUp size={22} />
             </div>
           </Link>
         </div>
