@@ -2,47 +2,62 @@
 @tailwind components;
 @tailwind utilities;
 
-input[type='number'] {
-  -moz-appearance: textfield;
-  appearance: textfield;
-}
-
-input[type='number']::-webkit-inner-spin-button {
-  -webkit-appearance: none;
-  margin: 0;
-}
-
-input[type='number']::-webkit-outer-spin-button {
-  -webkit-appearance: none;
-  margin: 0;
-}
-
 html {
   scroll-behavior: smooth;
 }
 
 @layer base {
   body {
-    @apply bg-[#ecf0f3] text-[#1f2937] tracking-wide
+    @apply bg-[#020617] text-slate-100 tracking-wide antialiased;
   }
 
-  h1, h2, h3, h4, h5, h6 {
-    @apply font-bold
+  h1,
+  h2,
+  h3,
+  h4,
+  h5,
+  h6 {
+    @apply font-bold text-slate-100;
   }
 
   h1 {
-    @apply text-4xl sm:text-5xl md:text-6xl
+    @apply text-4xl sm:text-5xl md:text-6xl;
   }
 
   h2 {
-    @apply text-3xl sm:text-4xl
+    @apply text-3xl sm:text-4xl;
   }
-  
+
   li {
-    @apply cursor-pointer
+    @apply cursor-pointer;
   }
 
   button {
-    @apply shadow-xl shadow-gray-400 rounded-xl uppercase bg-gradient-to-r from-[#5651e5] to-[#709dff] text-white
+    @apply rounded-md border border-cyan-400/60 bg-transparent px-6 py-2 font-medium uppercase tracking-wider text-cyan-400 transition-all duration-200 hover:border-cyan-400 hover:bg-cyan-400/10 hover:text-cyan-300;
+  }
+}
+
+@layer utilities {
+  .section-eyebrow {
+    @apply font-mono text-sm uppercase tracking-widest text-cyan-400;
+  }
+
+  .surface {
+    @apply rounded-xl border border-white/5 bg-slate-900/60 backdrop-blur-sm;
+  }
+
+  .fade-in {
+    animation: fade-in 0.6s ease-out both;
+  }
+}
+
+@keyframes fade-in {
+  from {
+    opacity: 0;
+    transform: translateY(12px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
   }
 }

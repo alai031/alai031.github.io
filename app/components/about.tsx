@@ -3,45 +3,46 @@ import Link from 'next/link';
 
 export default function AboutPage() {
   return (
-    <div id="about" className="flex w-full items-center p-2 py-28 md:h-screen">
-      <div className="m-auto max-w-[1240px] grid-cols-3 gap-8 md:grid">
-        <div className="col-span-2">
-          <p className="text-xl uppercase tracking-widest text-[#5651e5]">
-            About
-          </p>
-          <h2 className="py-4">Who I Am</h2>
-          <p className="py-2 text-gray-600">
-            I&apos;m a software engineer at Mission Support and Test Services,
-            LLC, where I build modern UIs for scientific and geospatial
-            applications. My day-to-day spans desktop development in C#, WPF,
-            and XAML as well as full-stack web development in Angular and
-            TypeScript. I take pride in collaborating with domain experts,
-            translating their workflows into clean interfaces, and measuring the
-            impact of what I ship.
-          </p>
-          <p className="py-2 text-gray-600">
-            I graduated from the University of California, Riverside in June
-            2023 with a B.S. in Computer Science (magna cum laude, GPA 3.93). I
-            care about writing maintainable code, learning new stacks quickly,
-            and building things that make other people&apos;s work easier.
-            Outside of engineering, I enjoy tennis, pickleball, reading, and
-            video games with friends.
-          </p>
+    <div id="about" className="w-full py-32">
+      <div className="mx-auto grid max-w-[1240px] grid-cols-1 gap-16 px-6 md:grid-cols-5 md:gap-20">
+        <div className="md:col-span-3">
+          <p className="section-eyebrow">02 / About</p>
+          <h2 className="mt-4 text-slate-100">Who I Am</h2>
+          <div className="mt-6 space-y-5 text-lg text-slate-400">
+            <p>
+              I&apos;m a software engineer at Mission Support and Test Services.
+              My day-to-day centers on adding new features and capabilities to
+              two desktop applications written in C# and XAML.
+            </p>
+            <p>
+              I take pride in collaborating with domain experts and translating
+              their workflows into clean interfaces. I graduated from the
+              University of California, Riverside with magna cum laude honors in
+              June 2023, earning a Bachelor of Science degree in Computer
+              Science.
+            </p>
+            <p>
+              Outside of engineering, I enjoy playing pickleball and video
+              games, and I&apos;m currently in a phase of watching K-dramas.
+            </p>
+          </div>
           <Link
             href="#experience"
-            className="cursor-pointer py-2 text-gray-600 underline"
+            className="mt-8 inline-block font-mono text-sm text-cyan-400 transition hover:text-cyan-300"
           >
-            See what I&apos;ve been working on.
+            See what I&apos;ve been working on &rarr;
           </Link>
         </div>
-        <div className="m-auto flex h-auto w-[50%] items-center justify-center rounded-xl p-4 shadow-xl shadow-gray-400 duration-300 ease-in hover:scale-105 md:w-full">
-          <Image
-            className="rounded-xl"
-            src="/aboutProfileImage.jpg"
-            alt="about image"
-            width="350"
-            height="300"
-          />
+        <div className="md:col-span-2">
+          <div className="mx-auto max-w-[320px] overflow-hidden rounded-xl border border-white/10 bg-slate-900 transition-transform duration-300 ease-in hover:scale-[1.025]">
+            <Image
+              className="rounded-xl"
+              src="/aboutProfileImage.jpg"
+              alt="Portrait of Auberon Lai"
+              width={350}
+              height={300}
+            />
+          </div>
         </div>
       </div>
     </div>
